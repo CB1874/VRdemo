@@ -1,0 +1,281 @@
+{
+  "ver": "2.3.13",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "383bce58-ef8a-4f5a-8f87-a8917557b6ee",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "44550": {
+      "importer": "gltf-scene",
+      "uuid": "383bce58-ef8a-4f5a-8f87-a8917557b6ee@44550",
+      "displayName": "",
+      "id": "44550",
+      "name": "PICO4_Controller_Right.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9cb26": {
+      "importer": "gltf-mesh",
+      "uuid": "383bce58-ef8a-4f5a-8f87-a8917557b6ee@9cb26",
+      "displayName": "",
+      "id": "9cb26",
+      "name": "Controller_Material0.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 4519
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62e1d": {
+      "importer": "gltf-mesh",
+      "uuid": "383bce58-ef8a-4f5a-8f87-a8917557b6ee@62e1d",
+      "displayName": "",
+      "id": "62e1d",
+      "name": "Power.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 6
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "73b7f": {
+      "importer": "gltf-animation",
+      "uuid": "383bce58-ef8a-4f5a-8f87-a8917557b6ee@73b7f",
+      "displayName": "",
+      "id": "73b7f",
+      "name": "Take 001.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "383bce58-ef8a-4f5a-8f87-a8917557b6ee@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 8
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7a3ca": {
+      "importer": "gltf-material",
+      "uuid": "383bce58-ef8a-4f5a-8f87-a8917557b6ee@7a3ca",
+      "displayName": "",
+      "id": "7a3ca",
+      "name": "lambert2.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2deab": {
+      "importer": "gltf-material",
+      "uuid": "383bce58-ef8a-4f5a-8f87-a8917557b6ee@2deab",
+      "displayName": "",
+      "id": "2deab",
+      "name": "Default_Material.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true,
+      "matchMeshNames": false
+    },
+    "animationImportSettings": [
+      {
+        "name": "Take 001",
+        "duration": 1,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Take 001",
+            "from": 0,
+            "to": 1,
+            "wrapMode": 2,
+            "previousId": "73b7f"
+          }
+        ]
+      }
+    ],
+    "assetFinder": {
+      "meshes": [
+        "383bce58-ef8a-4f5a-8f87-a8917557b6ee@9cb26",
+        "383bce58-ef8a-4f5a-8f87-a8917557b6ee@62e1d"
+      ],
+      "skeletons": [
+        "383bce58-ef8a-4f5a-8f87-a8917557b6ee@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "383bce58-ef8a-4f5a-8f87-a8917557b6ee@7a3ca",
+        "383bce58-ef8a-4f5a-8f87-a8917557b6ee@2deab"
+      ],
+      "scenes": [
+        "383bce58-ef8a-4f5a-8f87-a8917557b6ee@44550"
+      ]
+    },
+    "materials": {
+      "383bce58-ef8a-4f5a-8f87-a8917557b6ee@7a3ca": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_TEXTURE": true
+          }
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "b7f22c92-3d64-4805-b310-eb9402bdf2bd@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            },
+            "mainColor": {
+              "__type__": "cc.Color",
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 255
+            }
+          }
+        ]
+      },
+      "383bce58-ef8a-4f5a-8f87-a8917557b6ee@2deab": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_TEXTURE": true,
+            "USE_ALPHA_TEST": true
+          }
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "1c32ffed-9a03-4582-8c44-66ee49d41247@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            },
+            "mainColor": {
+              "__type__": "cc.Color",
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 255
+            }
+          }
+        ]
+      }
+    },
+    "mountAllAnimationsOnPrefab": true,
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    }
+  }
+}

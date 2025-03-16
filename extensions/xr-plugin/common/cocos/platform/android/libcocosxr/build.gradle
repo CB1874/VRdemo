@@ -1,0 +1,270 @@
+apply plugin: 'com.android.library'
+
+enum XRVendor {
+MONADO,
+META,
+HUAWEIVR,
+PICO,
+ROKID,
+SEED,
+SPACESXR,
+GSXR,
+YVR,
+HTC,
+IQIYI,
+SKYWORTH,
+FFALCON,
+NREAL,
+INMO,
+LENOVO
+};
+def SPACES_XR_SDK_VERSION = 130
+def KEY_SPACESXR_UPDATED = "spacesxr_updated"
+def KEY_SPACESXR_VERSION = "spacesxr_cur_version"
+def KEY_SPACESXR_CACHE_VERSION = "spacesxr_cache_version"
+
+class XRProjectProperties{
+    XRVendor vendor = XRVendor.MONADO
+    String appLibsDir
+    // 3.7.3
+    String engineVersion = null
+    Properties cfgProp = new Properties()
+    File cfgPropFile = null
+    void saveCfgProp() {
+        if(cfgPropFile != null) {
+            FileOutputStream fileOutputStream = new FileOutputStream(cfgPropFile)
+            cfgProp.store(fileOutputStream, "This is xr project property")
+            fileOutputStream.close()
+        }
+    }
+}
+
+project.extensions.create('xrprop', XRProjectProperties)
+
+def loadXROEMType = {
+    if(project.xrprop.vendor != XRVendor.MONADO) {
+        return true
+    }
+    println("loadXROEMType")
+    try {
+        if(project.hasProperty("COCOS_ENGINE_PATH")) {
+            String engineVersionPath = project.property("COCOS_ENGINE_PATH").toString() + "/cocos/cocos-version.h"
+            File ccVerFile = new File(engineVersionPath)
+            if(ccVerFile.exists()) {
+                println("read Cocos Version:" + ccVerFile.absolutePath)
+                BufferedReader bf = new BufferedReader(new InputStreamReader(new FileInputStream(ccVerFile), "UTF-8"))
+                if(bf != null) {
+                    String lineContent  = bf.readLine()
+                    while(lineContent != null) {
+                        if(lineContent.contains("COCOS_VERSION_STRING")) {
+                            String[] items = lineContent.split("\"")
+                            if(items != null) {
+                                int arrayLength = items.length
+                                for(int i=0; i < arrayLength; i++) {
+                                    if(items[i].length() >= 5 && items[i].length() <= 7) {
+                                        project.xrprop.engineVersion = items[i]
+                                        break
+                                    }
+                                }
+                            }
+                            if(project.xrprop.engineVersion != null)
+                                break
+                        }
+                        lineContent  = bf.readLine()
+                    }
+                    bf.close()
+                    println("CocosEngine Version:" + project.xrprop.engineVersion)
+                }
+            }
+        }
+
+        if(project.hasProperty("NATIVE_DIR")) {
+            project.xrprop.appLibsDir = project.property("NATIVE_DIR").toString() + "/app/libs"
+        }
+        File cfgFile = new File(gradle.getRootProject().getRootDir().absolutePath, 'cfg.cmake')
+        println("read cfgFile:" + cfgFile.absolutePath)
+        BufferedReader bf = new BufferedReader(new InputStreamReader(new FileInputStream(cfgFile), "UTF-8"))
+        if(bf != null) {
+            String lineContent  = bf.readLine()
+            while(lineContent != null) {
+                if(lineContent.contains("XR_OEM_META") && lineContent.contains("ON")) {
+                    project.xrprop.vendor = XRVendor.META
+                    break
+                } else if(lineContent.contains("XR_OEM_PICO") && lineContent.contains("ON")) {
+                    project.xrprop.vendor = XRVendor.PICO
+                    break
+                } else if(lineContent.contains("XR_OEM_HUAWEIVR") && lineContent.contains("ON")) {
+                    project.xrprop.vendor = XRVendor.HUAWEIVR
+                    break
+                } else if(lineContent.contains("XR_OEM_ROKID") && lineContent.contains("ON")) {
+                    project.xrprop.vendor = XRVendor.ROKID
+                    break
+                } else if(lineContent.contains("XR_OEM_SNAPDRAGON_SPACES") && lineContent.contains("ON")) {
+                    project.xrprop.vendor = XRVendor.SPACESXR
+                    break
+                } else if(lineContent.contains("XR_OEM_GSXR") && lineContent.contains("ON")) {
+                    project.xrprop.vendor = XRVendor.GSXR
+                    break
+                } else if(lineContent.contains("XR_OEM_YVR") && lineContent.contains("ON")) {
+                    project.xrprop.vendor = XRVendor.YVR
+                    break
+                } else if(lineContent.contains("XR_OEM_SEED") && lineContent.contains("ON")) {
+                    project.xrprop.vendor = XRVendor.SEED
+                    break
+                } else {
+                    project.xrprop.vendor = XRVendor.MONADO
+                }
+                lineContent  = bf.readLine()
+            }
+            bf.close()
+        }
+
+        if(project.xrprop.vendor != XRVendor.SPACESXR ) {
+            return
+        }
+
+        //
+        File appLibsFile = file(project.xrprop.appLibsDir)
+        if(!appLibsFile.exists()) {
+            file(project.xrprop.appLibsDir).mkdirs()
+        }
+        project.xrprop.cfgPropFile = file(project.xrprop.appLibsDir + "/XRProjectProperties.cfg")
+        if(!project.xrprop.cfgPropFile.exists()) {
+            try {
+                if(!project.xrprop.cfgPropFile.createNewFile()) {
+                    println("XRProjectProperties.cfg create failed!!!")
+                } else {
+                    println("XRProjectProperties.cfg create success!")
+                }
+            } catch(Exception e) {
+                e.printStackTrace()
+            }
+        }
+
+        if(project.xrprop.cfgPropFile.exists()) {
+            FileInputStream fileInputStream = new FileInputStream(project.xrprop.cfgPropFile)
+            project.xrprop.cfgProp.load(fileInputStream)
+            fileInputStream.close()
+            if(project.xrprop.cfgProp.getProperty(KEY_SPACESXR_UPDATED) != null) {
+                println("get spacesxr_updated:" + project.xrprop.cfgProp.getProperty(KEY_SPACESXR_UPDATED))
+                println("get spacesxr_cache_version:" + project.xrprop.cfgProp.getProperty(KEY_SPACESXR_CACHE_VERSION))
+                println("get spacesxr_cur_version:" + project.xrprop.cfgProp.getProperty(KEY_SPACESXR_VERSION))
+            } else {
+                println("init spacesxr_updated:false")
+                project.xrprop.cfgProp.setProperty(KEY_SPACESXR_UPDATED, "false")
+                project.xrprop.cfgProp.setProperty(KEY_SPACESXR_CACHE_VERSION, "111")
+                project.xrprop.cfgProp.setProperty(KEY_SPACESXR_VERSION, String.valueOf(SPACES_XR_SDK_VERSION))
+                project.xrprop.saveCfgProp()
+            }
+        }
+    } catch(Exception e) {
+        println(e.getLocalizedMessage())
+    } finally {
+    }
+    return true
+}
+
+task copySpacesXRAAR(type: Copy) {
+    println('copySpacesXRAAR init')
+    loadXROEMType()
+    if(project.xrprop.vendor != XRVendor.SPACESXR ) {
+        println('copySpacesXRAAR pass when vendor is not spaces xr!')
+        return
+    }
+
+    doFirst {
+        println '\n\n\nready to execute copySpacesXRAAR task...'
+    }
+    doLast {
+        project.xrprop.cfgProp.setProperty(KEY_SPACESXR_CACHE_VERSION, String.valueOf(SPACES_XR_SDK_VERSION))
+        project.xrprop.cfgProp.setProperty(KEY_SPACESXR_UPDATED, "true")
+        project.xrprop.saveCfgProp()
+        println '\n\n\nfinish copySpacesXRAAR'
+    }
+
+    File fileSrcDir = file('dependencies/spacesxr')
+    String spaceUpdatedValue = project.xrprop.cfgProp.getProperty(KEY_SPACESXR_UPDATED)
+    String cacheVersionValue = project.xrprop.cfgProp.getProperty(KEY_SPACESXR_CACHE_VERSION)
+    if(spaceUpdatedValue == null || spaceUpdatedValue == "false" || (cacheVersionValue != null && Integer.valueOf(cacheVersionValue) < SPACES_XR_SDK_VERSION)) {
+        println("\n\nIs need to copySpacesXRAAR...")
+        println("currently sdk version is v" + SPACES_XR_SDK_VERSION)
+        println("cache sdk version is v" + (cacheVersionValue == null ? "000" : cacheVersionValue))
+        println("\n\n")
+        from fileSrcDir.toString()
+        into  project.xrprop.appLibsDir
+        include '*.aar'
+    } else {
+        println("\n\nNot need to copySpacesXRAAR...")
+        println("sdk version is v" + SPACES_XR_SDK_VERSION)
+        println("\n\n")
+    }
+}
+
+gradle.projectsEvaluated {
+    println('projectsEvaluated')
+    loadXROEMType()
+    println('projectDir:' + projectDir)
+}
+
+afterEvaluate {
+    println('afterEvaluate')
+    loadXROEMType()
+    boolean isSpacesXR = project.xrprop.vendor == XRVendor.SPACESXR
+    if(isSpacesXR) {
+        Set<Project> projects = project.parent.getAllprojects()
+        for(Project pj : projects) {
+            println('afterEvaluate:' + pj.name + ',' + pj.getRootProject().name + ',' + pj.tasks.size() + ',' + pj.getDisplayName().contains(':'))
+            boolean isRootProject = pj.getRootProject().name == pj.name && pj.getDisplayName().contains(':')
+            if(isRootProject) {
+                pj.tasks.whenTaskAdded { task ->
+                    if(task.name == 'preBuild') {
+                        println('prebuild')
+                        task.dependsOn ':libxrcommon:copySpacesXRAAR'
+                    }
+                }
+                break
+            }
+        }
+    }
+}
+project.preBuild.dependsOn(copySpacesXRAAR)
+
+android {
+    compileSdkVersion PROP_COMPILE_SDK_VERSION.toInteger()
+    if (android.hasProperty('namespace')) {
+        namespace 'com.cocos.lib.xr'
+    }
+
+    defaultConfig {
+        minSdkVersion PROP_MIN_SDK_VERSION
+        targetSdkVersion PROP_TARGET_SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+    }
+
+    sourceSets.main {
+        java.srcDirs "src"
+        res.srcDirs 'res'
+        jniLibs.srcDirs 'libs'
+        manifest.srcFile "AndroidManifest.xml"
+    }
+
+    buildDir = new File(rootProject.buildDir, project.name)
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles.add(file('proguard-gvr.txt'))
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':libcocos')
+}

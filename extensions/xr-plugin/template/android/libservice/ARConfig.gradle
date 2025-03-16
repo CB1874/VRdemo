@@ -1,0 +1,55 @@
+class ARConfig {
+    public Project rootProject
+    ARConfig(Project project) {
+        rootProject = project
+    }
+
+    Properties readARConfigProperties() {
+        File propertiesFile = rootProject.file("ARConfig.properties")
+        if (propertiesFile.canRead()) {
+            Properties properties = new Properties()
+            try {
+                def inputStream = new FileInputStream(propertiesFile)
+                properties.load(inputStream)
+                inputStream.close()
+            } catch (Exception e) {
+                System.err.println(e.getLocalizedMessage())
+            }
+            return properties
+        } else {
+            def message = "Can not read " + propertiesFile.name + " File!"
+            System.err.println(message)
+            return null
+        }
+    }
+
+    boolean isBuildARCVLib() {
+        Properties properties = readARConfigProperties();
+        if(properties != null && properties.getProperty("build_implement_ARCVLib") != null) {
+            if(properties.getProperty("build_implement_ARCVLib").equals("1")) {
+                return true
+            }
+        }
+        return false
+    }
+
+    boolean isBuildARCVLib_SO() {
+        Properties properties = readARConfigProperties();
+        if (properties != null && properties.getProperty("build_implement_CV_SO") != null) {
+            if (properties.getProperty("build_implement_CV_SO").equals("1")) {
+                return true
+            }
+        }
+        return false
+    }
+
+}
+
+
+class ARConfigPlugin implements Plugin<Project> {
+    void apply(Project project) {
+         project.extensions.create('arConfig', ARConfig, project)
+    }
+}
+
+apply plugin: ARConfigPlugin

@@ -1,0 +1,219 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "Direct Interactor",
+    "_objFlags": 0,
+    "_native": "",
+    "data": {
+      "__id__": 1
+    },
+    "optimizationPolicy": 0,
+    "persistent": false,
+    "asyncLoadAssets": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Direct Interactor",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": null,
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 2
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 6
+      },
+      {
+        "__id__": 8
+      },
+      {
+        "__id__": 10
+      }
+    ],
+    "_prefab": {
+      "__id__": 14
+    },
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "42802Gifv1E5aGtEbsdZBRs",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 3
+    },
+    "_trackingSource": 3,
+    "_trackingType": 1,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "9a/A6QMjVMKreH4fOOyrhh"
+  },
+  {
+    "__type__": "1e92bOQQApPabAbOLV6ZwkG",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 5
+    },
+    "_inputDevice": 0,
+    "_selectActionLeft": 6,
+    "_selectActionRight": 7,
+    "_activateActionLeft": 4,
+    "_activateActionRight": 5,
+    "_UIPressActionLeft": 4,
+    "_UIPressActionRight": 5,
+    "_axisToPressThreshold": 0.1,
+    "_model": null,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "42EbhI3AVGwpKElxHj8bLH"
+  },
+  {
+    "__type__": "cc.SphereCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 7
+    },
+    "_material": {
+      "__uuid__": "ba21476f-2866-4f81-9c4d-6e359316e448",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
+    "_isTrigger": true,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_radius": 0.1,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "39O73jnhpB7KkdF6XC3wTq"
+  },
+  {
+    "__type__": "fb088tgUYlNQZWyJub1GwiW",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 9
+    },
+    "_attachTransform": null,
+    "_selectActionTrigger": 0,
+    "_startingSelectedInteractable": null,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "f47j2ZZSZId7YVN0RVwzlC"
+  },
+  {
+    "__type__": "94f4b3Y9BtBuYwZ00W4c5re",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 11
+    },
+    "audioEvents": {
+      "__id__": 12
+    },
+    "interactorEvents": {
+      "__id__": 13
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "00Z/bs2nFBuL9nTRU6gxyA"
+  },
+  {
+    "__type__": "cc.AudioEvents",
+    "_onSelectEntered": false,
+    "_onSelectEnteredAudioClip": null,
+    "_onSelectExited": false,
+    "_onSelectExitedAudioClip": null,
+    "_onSelectCanceled": false,
+    "_onSelectCanceledAudioClip": null,
+    "_onHoverEntered": false,
+    "_onHoverEnteredAudioClip": null,
+    "_onHoverExited": false,
+    "_onHoverExitedAudioClip": null,
+    "_onHoverCanceled": false,
+    "_onHoverCanceledAudioClip": null
+  },
+  {
+    "__type__": "cc.SubInteractorEvents",
+    "hoverEnterEvents": [],
+    "hoverExitEvents": [],
+    "selectEnterEvents": [],
+    "selectExitEvents": []
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__id__": 0
+    },
+    "fileId": "c46/YsCPVOJYA4mWEpNYRx"
+  }
+]

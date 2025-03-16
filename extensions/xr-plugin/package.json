@@ -1,0 +1,402 @@
+{
+    "name": "xr-plugin",
+    "title": "i18n:xr-plugin.title",
+    "version": "1.2.2",
+    "editor": ">=3.6.1",
+    "package_version": 2,
+    "author": "Cocos Creator",
+    "description": "i18n:xr-plugin.description",
+    "main": "./dist/browser.js",
+    "contributions": {
+        "builder": "./dist/builder.js",
+        "asset-db": {
+            "mount": {
+                "path": "./assets",
+                "readonly": true
+            }
+        },
+        "menu": [
+            {
+                "path": "i18n:menu.node",
+                "group": "create",
+                "label": "i18n:xr-plugin.title"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.xr_agent",
+                "params": [
+                    {
+                        "name": "XR Agent",
+                        "assetUuid": "3d065b3c-566f-4c97-9cdc-d8d543209c72"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.xr_hmd",
+                "params": [
+                    {
+                        "name": "XR HMD",
+                        "assetUuid": "a6548d6f-656a-4965-94ed-7879954afaa3"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.ray_interactor",
+                "params": [
+                    {
+                        "name": "Ray Interactor",
+                        "assetUuid": "946baefb-ffac-42a6-b254-67d4522b3695"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.direct_interactor",
+                "params": [
+                    {
+                        "name": "Direct Interactor",
+                        "assetUuid": "f2496fec-367c-4efc-a8a1-d665ce605f3e"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.locomotion_checker",
+                "params": [
+                    {
+                        "name": "Locomotion Checker",
+                        "assetUuid": "7db4ad17-fae5-4837-8e86-07acd7114c41"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.teleportable",
+                "params": [
+                    {
+                        "name": "Teleportable",
+                        "assetUuid": "68cd5774-0c88-4292-9071-c4136350ce4a"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.simple_interactable",
+                "params": [
+                    {
+                        "name": "Simple Interactable",
+                        "assetUuid": "af0f7850-f0b6-4df7-82fb-532ed6dd8892"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.grab_interactable",
+                "params": [
+                    {
+                        "name": "Grab Interactable",
+                        "assetUuid": "2c9473b4-fb16-467b-a8af-63c489379bb9"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.xr_simulator",
+                "params": [
+                    {
+                        "name": "XR Simulator",
+                        "assetUuid": "a23472af-b446-4394-a0ca-e9a7383e717b"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.xr_videoplayer",
+                "params": [
+                    {
+                        "name": "XR Video Player",
+                        "assetUuid": "b4108bec-27e0-4448-b68d-0c07d3ef3838"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.xr_webview",
+                "params": [
+                    {
+                        "name": "XR WebView",
+                        "assetUuid": "916d5076-5b73-41ed-ab87-fd3d7b312b50"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.gaze_pointer_interactor",
+                "params": [
+                    {
+                        "name": "Gaze Pointer Interactor",
+                        "assetUuid": "8c5ba805-8420-4719-9db9-3e373077bf09"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.button",
+                "params": [
+                    {
+                        "name": "Button",
+                        "assetUuid": "ecff6d47-4fcd-4b38-89c2-56fa8d2cfba9"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.editBox",
+                "params": [
+                    {
+                        "name": "EditBox",
+                        "assetUuid": "06756976-6fb4-4178-a4b1-1d2d06fa9936"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.layout",
+                "params": [
+                    {
+                        "name": "Layout",
+                        "assetUuid": "e7919031-4ead-4400-adde-5a0e7df3a18c"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.pageView",
+                "params": [
+                    {
+                        "name": "PageView",
+                        "assetUuid": "18c0a1cf-be2f-492b-b6c2-ba65bba6584a"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.progressBar",
+                "params": [
+                    {
+                        "name": "ProgressBar",
+                        "assetUuid": "3de18900-7d9a-493a-858c-6543f645d80b"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.richText",
+                "params": [
+                    {
+                        "name": "RichText",
+                        "assetUuid": "76cccb20-ee44-4b95-9a7d-67e6ca533cb7"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.scrollView",
+                "params": [
+                    {
+                        "name": "ScrollView",
+                        "assetUuid": "fa60f09b-6236-427d-8fa1-d47e32675698"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.slider",
+                "params": [
+                    {
+                        "name": "Slider",
+                        "assetUuid": "8528008d-4ddf-450d-abf0-30062eaf6ac8"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.toggle",
+                "params": [
+                    {
+                        "name": "Toggle",
+                        "assetUuid": "4e105868-5cad-4819-bff7-90b0ee4aef05"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.toggleGroup",
+                "params": [
+                    {
+                        "name": "ToggleGroup",
+                        "assetUuid": "57e166b1-f521-4970-976a-b617c0473dd6"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.sprite",
+                "params": [
+                    {
+                        "name": "Sprite",
+                        "assetUuid": "bd5fb4b8-179f-4cd8-abdf-efd75cc03f25"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title/i18n:xr-plugin.xrui",
+                "label": "i18n:xr-plugin.node.label",
+                "params": [
+                    {
+                        "name": "Label",
+                        "assetUuid": "88ba748c-f52f-43e1-8059-87d656040062"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "group": "create",
+                "label": "i18n:xr-plugin.xrui"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.ar_camera",
+                "params": [
+                    {
+                        "name": "AR Camera",
+                        "assetUuid": "1cfd5c31-2bca-45f0-9b8d-18ec94803da3"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.plane_tracking",
+                "params": [
+                    {
+                        "name": "Plane Tracking",
+                        "assetUuid": "0a492749-3abc-45b9-95e0-949fa24bd811"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.image_tracking",
+                "params": [
+                    {
+                        "name": "Image Tracking",
+                        "assetUuid": "ed052b9a-bc15-4cb2-b985-6f4aba6bd048"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.world_meshing",
+                "params": [
+                    {
+                        "name": "Meshing",
+                        "assetUuid": "52050996-00bc-418f-8c60-7f5da30e1783"
+                    }
+                ],
+                "message": "create-node"
+            },
+            {
+                "path": "i18n:menu.node/i18n:xr-plugin.title",
+                "label": "i18n:xr-plugin.node.screen_touch_interactor",
+                "params": [
+                    {
+                        "name": "Screen Touch Interactor",
+                        "assetUuid": "ef40d8ad-7e6c-4060-a7c5-2951cd36f040"
+                    }
+                ],
+                "message": "create-node"
+            }
+        ],
+        "hierarchy": {
+            "menu": {
+                "methods": "./dist/hierarchy-menu.js",
+                "nodeMenu": "onNodeMenu"
+            }
+        },
+        "messages": {
+            "create-node": {
+                "methods": [
+                    "create-node"
+                ]
+            },
+            "open": {
+                "methods": [
+                    "open"
+                ]
+            },
+            "agree": {
+                "methods": [
+                    "agree"
+                ]
+            }
+        },
+        "inspector": {
+            "section": {
+                "node": {
+                    "cc.ARTrackingBase": "./dist/comp-ar-tracking-base.js",
+                    "cc.FaceLandMarkController": "./dist/face-landmark-controller.js",
+                    "cc.ScreenTouchInteractor": "./dist/screen-touch-interactor"
+                }
+            }
+        }
+    },
+    "panels": {
+        "default": {
+            "main": "./resource/panel.js",
+            "size": {
+                "min-width": 700,
+                "min-height": 700
+            },
+            "flags": {
+                "save": false
+            }
+        }
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^7.1.0",
+        "@typescript-eslint/parser": "^4.29.3",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-plugin-import": "^2.24.1",
+        "typescript": "^4.3.5"
+    }
+}

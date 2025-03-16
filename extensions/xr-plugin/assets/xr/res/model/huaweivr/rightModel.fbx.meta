@@ -1,0 +1,281 @@
+{
+  "ver": "2.3.13",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "9191946b-8fcc-47b9-9028-693708ab1806",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "30732": {
+      "importer": "gltf-skeleton",
+      "uuid": "9191946b-8fcc-47b9-9028-693708ab1806@30732",
+      "displayName": "",
+      "id": "30732",
+      "name": "UnnamedSkeleton-0.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 35
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d0219": {
+      "importer": "gltf-mesh",
+      "uuid": "9191946b-8fcc-47b9-9028-693708ab1806@d0219",
+      "displayName": "",
+      "id": "d0219",
+      "name": "R_handle.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 3491
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a77d6": {
+      "importer": "gltf-mesh",
+      "uuid": "9191946b-8fcc-47b9-9028-693708ab1806@a77d6",
+      "displayName": "",
+      "id": "a77d6",
+      "name": "Hand_rig:OOB_Hand.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 2696
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "73b7f": {
+      "importer": "gltf-animation",
+      "uuid": "9191946b-8fcc-47b9-9028-693708ab1806@73b7f",
+      "displayName": "",
+      "id": "73b7f",
+      "name": "Take 001.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.6666666269302368
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "f1394": {
+      "importer": "gltf-skeleton",
+      "uuid": "9191946b-8fcc-47b9-9028-693708ab1806@f1394",
+      "displayName": "",
+      "id": "f1394",
+      "name": "UnnamedSkeleton-1.skeleton",
+      "userData": {
+        "gltfIndex": 1,
+        "jointsLength": 20
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4a68f": {
+      "importer": "texture",
+      "uuid": "9191946b-8fcc-47b9-9028-693708ab1806@4a68f",
+      "displayName": "",
+      "id": "4a68f",
+      "name": "right_handle_1.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://xr-plugin/xr/res/model/huaweivr/right_handle.jpg"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6371e": {
+      "importer": "gltf-material",
+      "uuid": "9191946b-8fcc-47b9-9028-693708ab1806@6371e",
+      "displayName": "",
+      "id": "6371e",
+      "name": "R_handle1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "872ad": {
+      "importer": "gltf-material",
+      "uuid": "9191946b-8fcc-47b9-9028-693708ab1806@872ad",
+      "displayName": "",
+      "id": "872ad",
+      "name": "Hand_rig:Hand_M.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3799b": {
+      "importer": "gltf-scene",
+      "uuid": "9191946b-8fcc-47b9-9028-693708ab1806@3799b",
+      "displayName": "",
+      "id": "3799b",
+      "name": "rightModel.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "right_handle_1",
+        "uri": "db://xr-plugin/xr/res/model/huaweivr/right_handle.jpg"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "Take 001",
+        "duration": 1.6666666269302368,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Take 001",
+            "from": 0,
+            "to": 1.6666666269302368,
+            "wrapMode": 2,
+            "previousId": "73b7f"
+          }
+        ]
+      }
+    ],
+    "assetFinder": {
+      "meshes": [
+        "9191946b-8fcc-47b9-9028-693708ab1806@d0219",
+        "9191946b-8fcc-47b9-9028-693708ab1806@a77d6"
+      ],
+      "skeletons": [
+        "9191946b-8fcc-47b9-9028-693708ab1806@30732",
+        "9191946b-8fcc-47b9-9028-693708ab1806@f1394"
+      ],
+      "textures": [
+        "9191946b-8fcc-47b9-9028-693708ab1806@4a68f"
+      ],
+      "materials": [
+        "9191946b-8fcc-47b9-9028-693708ab1806@6371e",
+        "9191946b-8fcc-47b9-9028-693708ab1806@872ad"
+      ],
+      "scenes": [
+        "9191946b-8fcc-47b9-9028-693708ab1806@3799b"
+      ]
+    },
+    "fbx": {
+      "smartMaterialEnabled": false,
+      "matchMeshNames": false
+    },
+    "ignoreOriginalImageLocation": false,
+    "materials": {
+      "9191946b-8fcc-47b9-9028-693708ab1806@6371e": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_TEXTURE": true
+          }
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "5d7114c3-21e8-45b0-ad6d-00de6b7e98af@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          }
+        ]
+      }
+    },
+    "mountAllAnimationsOnPrefab": true,
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    }
+  }
+}

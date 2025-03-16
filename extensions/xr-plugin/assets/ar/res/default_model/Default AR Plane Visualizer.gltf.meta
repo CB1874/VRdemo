@@ -1,0 +1,76 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "546c9081-6e92-4fbb-9f13-a4f9c49b55d6",
+  "files": [],
+  "subMetas": {
+    "eae54": {
+      "importer": "gltf-mesh",
+      "uuid": "546c9081-6e92-4fbb-9f13-a4f9c49b55d6@eae54",
+      "displayName": "",
+      "id": "eae54",
+      "name": "AR Plane.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 2
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fbca6": {
+      "importer": "gltf-scene",
+      "uuid": "546c9081-6e92-4fbb-9f13-a4f9c49b55d6@fbca6",
+      "displayName": "",
+      "id": "fbca6",
+      "name": "Default AR Plane Visualizer.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "assetFinder": {
+      "meshes": [
+        "546c9081-6e92-4fbb-9f13-a4f9c49b55d6@eae54"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "546c9081-6e92-4fbb-9f13-a4f9c49b55d6@fbca6"
+      ]
+    },
+    "mountAllAnimationsOnPrefab": true,
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    }
+  }
+}

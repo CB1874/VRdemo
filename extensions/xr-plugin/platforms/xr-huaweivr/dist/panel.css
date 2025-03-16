@@ -1,0 +1,9 @@
+.xr-build .tip-content {
+  position: relative;
+}
+.xr-build .tip-content .disable-native-tip {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #1b1d1d1f;
+}

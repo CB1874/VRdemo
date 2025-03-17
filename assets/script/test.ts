@@ -7,18 +7,15 @@ export class test extends Component {
     @property(Node)
     obj: Node=null;
 
-    @property
-    v:number=5;
-
     start() {
 
     }
 
     update(deltaTime: number) {
+        let v = Math.floor(Math.random()*(30-1+1)+1)
         if (this.obj.isValid) {
-            this.obj.translate(new Vec3(0,0,-this.v*deltaTime));
-            console.log("position:", this.obj.position.toString());
-            console.log("worldposition:", this.obj.worldPosition.toString());
+            this.obj.translate(new Vec3(0,0,-v*deltaTime));
+            console.log("test position:", this.obj.position.toString());
         } else {
             console.warn("The object has been destroyed.");
         }

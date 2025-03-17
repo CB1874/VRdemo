@@ -12,7 +12,8 @@ export class test extends Component {
     }
 
     update(deltaTime: number) {
-        let v = Math.floor(Math.random()*(30-1+1)+1)
+        //let v = Math.floor(Math.random()*(30-1+1)+1)
+        let v =5;
         if (this.obj.isValid) {
             this.obj.translate(new Vec3(0,0,-v*deltaTime));
             console.log("test position:", this.obj.position.toString());

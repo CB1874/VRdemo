@@ -584,7 +584,7 @@
     "_postProcess": null,
     "_usePostProcess": false,
     "_cameraType": 2,
-    "_trackingType": 1,
+    "_trackingType": 3,
     "_id": "f3bEQ1CeRMYL6Kdgfxa8T9"
   },
   {
@@ -631,7 +631,7 @@
     "_enabled": true,
     "__prefab": null,
     "_trackingSource": 2,
-    "_trackingType": 1,
+    "_trackingType": 3,
     "_id": "a4C16v22pKvpXDAZFXnJGE"
   },
   {
@@ -663,7 +663,7 @@
     "character": {
       "__id__": 7
     },
-    "_id": "b7qdTFWldIlq+rrSrpVXMx"
+    "_id": "5cONOaa3VFvoQ65A2ko8b/"
   },
   {
     "__type__": "cc.Node",
@@ -878,7 +878,7 @@
     "obj": {
       "__id__": 20
     },
-    "_id": "d7XkdoOPFDMK+b+qXMF0dw"
+    "_id": "18AJUxYopFKKMiCeREknRl"
   },
   {
     "__type__": "cc.Node",

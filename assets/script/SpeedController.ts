@@ -25,7 +25,7 @@ export class SpeedControl extends Component {
         // 更新记录点
         this._lastPos=this.controllerModel.position.clone();
         
-        this.character.translate(new Vec3(0,0,-delta.length()));
+        this.character.translate(new Vec3(0,0,-2*delta.length()));
         console.log("character position:",this.character.position.toString());
 
         //this.controllerModel.translate(new Vec3(0,0,-5*dt));
